@@ -3,11 +3,8 @@
 tail -n +3 "$0" | ssh root@xxx.xxx.xxx.xxx ; exit
 set -eu
 
-#update serveur
-apt-get update
-
-#upgrade serveur
-apt-get upgrade
+# mise a jour et installation des nouveaux paquets
+sudo apt-get update -y && sudo apt-get upgrade -y
 
 #install ngix
 apt-get install ngix
